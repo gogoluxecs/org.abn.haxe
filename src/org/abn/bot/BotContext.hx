@@ -7,6 +7,8 @@ import org.abn.neko.AppContext;
 import org.abn.neko.database.mysql.MySqlContext;
 import org.abn.neko.xmpp.XMPPContext;
 
+import haxe.Template;
+
 class BotContext extends AppContext
 {
 	public function new(context:AppContext) 
@@ -75,4 +77,14 @@ class BotContext extends AppContext
 		return result;
 	}
 	
+  /**
+   *
+   * @access public
+   * @param String s template name
+   * @return Template
+   */
+  public function getRender(s:String):Template
+  {
+    return new haxe.Template(s);
+  }
 }

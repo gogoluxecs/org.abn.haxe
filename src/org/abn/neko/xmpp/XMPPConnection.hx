@@ -37,6 +37,7 @@ class XMPPConnection
 	
 	public function new(username:String, password:String, server:String) 
 	{
+	
 		this.username = username;
 		this.password = password;
 		this.server = server;
